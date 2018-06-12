@@ -1,0 +1,19 @@
+{
+  "name": "covve-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/covveco/website.git"
+  },
+  "author": "Covve.co",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/covveco/website/issues"
+  },
+  "homepage": "https://gitlab.com/covveco/website#README"
+}
