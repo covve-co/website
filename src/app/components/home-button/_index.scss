@@ -1,0 +1,41 @@
+@keyframes translate {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.home-button {
+  flex: 5;
+  width: 340px;
+  overflow: hidden;
+  a {
+    flex: 2;
+    color: black;
+    font-size: 80px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1.8;
+  }
+  .wave {
+    flex: 1;
+    width: 150%;
+    visibility: hidden;
+  }
+}
+
+.home-button:hover {
+  a {
+    color: pink;
+  }
+  .wave {
+    animation: translate 8s infinite;
+    animation-timing-function: linear;
+    visibility: visible;
+  }
+}

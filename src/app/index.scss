@@ -1,0 +1,17 @@
+body {
+  background-color: whitesmoke;
+  overflow: hidden;
+}
+
+#app {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+}
+
+@import 'styles/normalize';
+@import 'components/home/index';
+@import 'components/home-button/index';
