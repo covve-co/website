@@ -1,4 +1,4 @@
-@keyframes translate {
+@keyframes wave-translate {
   0% {
     transform: translateX(0%);
   }
@@ -26,6 +26,7 @@
 }
 
 .home-button {
+  user-select: none;
   font-weight: bold;
   font-family: 'Raleway', sans-serif;
   width: 340px;
@@ -52,7 +53,7 @@
     color: $highlight-color;
   }
   .wave {
-    animation: translate 8s infinite;
+    animation: wave-translate 8s infinite;
     animation-timing-function: linear;
     visibility: visible;
   }
