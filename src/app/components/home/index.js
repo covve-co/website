@@ -2,45 +2,50 @@ import React from 'react';
 import HomeButton from '../home-button/';
 import waves from './waves.svg';
 import logo from './logo.svg';
+import { isAbsolute } from 'path';
 
 export default class Home extends React.Component {
   constructor() {
     super();
     this.state = {
-      waves: -300
+      leftState: 'home-left left-retract'
     };
   }
-  _onMouseMove(e) {
-    this.setState({ waves: -300 + e.screenY / 20 });
+  _onMouseEnter(e) {
+    this.setState({
+      leftState: 'home-left left-extend'
+    });
+  }
+  _onMouseLeave(e) {
+    this.setState({
+      leftState: 'home-left left-retract'
+    });
   }
 
   render() {
     return (
       <div style={{ display: 'flex', flex: 5, flexDirection: 'row' }}>
         <div
-          class="home-left"
-          style={{ flex: 2, display: 'flex', flexDirection: 'column' }}
+          class={this.state.leftState}
+          style={{
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+          onMouseEnter={this._onMouseEnter.bind(this)}
+          onMouseLeave={this._onMouseLeave.bind(this)}
         >
           <img class="logo" style={{ flex: 1 }} src={logo} alt="this no work" />
-          <div style={{ flex: 5 }} onMouseMove={this._onMouseMove.bind(this)}>
+          <div class="menu-wrapper" style={{ flex: 5 }}>
             <HomeButton link="/about" title="About" />
             <HomeButton link="/work" title="Work" />
             <HomeButton link="/contact" title="Contact" />
             {/* <HomeButton link="/contact" title="Contact" /> */}
           </div>
         </div>
-        <div class="home-right" style={{ flex: 1 }}>
-          <img
-            id="waves"
-            class="waves"
-            src={waves}
-            alt="this no work"
-            style={{
-              position: 'absolute',
-              top: this.state.waves,
-              height: '150vh'
-            }}
-          />
+        <div class="home-right" style={{ flex: 5 }}>
+          <div class="canvas">
+            <h1> A thing </h1>
+          </div>
         </div>
       </div>
     );

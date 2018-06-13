@@ -4,10 +4,32 @@
   margin-bottom: 30px;
 }
 
-.home-left {
+.home-left,
+.home-right {
   padding: 60px;
+}
+
+.left-retract {
+  flex: 1;
+  .logo {
+    color: white;
+  }
+}
+
+.left-extend {
+  background-color: #ffe135;
+  flex: 2;
+}
+
+.home-left {
+  transition-duration: 1s;
   padding-left: 10vw;
 }
 
 .home-right {
+  background-color: gray;
+  transition-duration: 1s;
+  .canvas {
+    transition-duration: 1s;
+  }
 }
