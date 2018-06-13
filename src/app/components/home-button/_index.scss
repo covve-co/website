@@ -1,0 +1,59 @@
+@keyframes translate {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wavy {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg) translateY(10px) translateX(10px);
+  }
+  75% {
+    transform: rotate(-5deg) translateY(-5px) translate(0px);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.home-button {
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  width: 340px;
+  overflow: hidden;
+  transition-duration: 1s;
+  a {
+    flex: 1;
+    color: black;
+    font-size: 80px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .wave {
+    flex: 2;
+    width: 150%;
+    visibility: hidden;
+  }
+}
+
+.home-button:hover {
+  a {
+    animation: wavy 3s infinite;
+    animation-timing-function: linear;
+    color: $highlight-color;
+  }
+  .wave {
+    animation: translate 8s infinite;
+    animation-timing-function: linear;
+    visibility: visible;
+  }
+}
