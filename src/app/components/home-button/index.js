@@ -6,9 +6,14 @@ export default class HomeButton extends React.Component {
     return (
       <div
         class="home-button"
-        style={{ display: 'flex', flexDirection: 'column' }}
+        style={{
+          display: 'flex',
+          flexDirection: 'column'
+        }}
       >
-        <a href={this.props.link}>{this.props.title}</a>
+        <a id={this.props.title} href={this.props.link}>
+          {this.props.title}
+        </a>
         <img src={wave} class="wave" />
       </div>
     );
