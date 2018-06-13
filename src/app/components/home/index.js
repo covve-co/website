@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router';
 import BrowserRouter from 'react-router-dom';
 import HomeButton from '../home-button/';
 import About from '../about/';
+import Contact from '../contact';
+import Work from '../work';
 
 import waves from './waves.svg';
 import logo from './logo.svg';
@@ -38,7 +40,7 @@ export default class Home extends React.Component {
           onMouseEnter={this._onMouseEnter.bind(this)}
           onMouseLeave={this._onMouseLeave.bind(this)}
         >
-          <img class="logo" style={{ flex: 1 }} src={logo} alt="this no work" />
+          <img class="logo" style={{ flex: 1 }} src={logo} />
           <div class="menu-wrapper" style={{ flex: 5 }}>
             <HomeButton link="/about" title="About" />
             <HomeButton link="/work" title="Work" />
@@ -48,9 +50,13 @@ export default class Home extends React.Component {
         </div>
         <div class="home-right" style={{ flex: 5 }}>
           <div class="canvas">
-            <Switch>
-              <Route path="/About" component={About} />
-            </Switch>
+            <main>
+              <Switch>
+                <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/work" component={Work} />
+              </Switch>
+            </main>
           </div>
         </div>
       </div>
