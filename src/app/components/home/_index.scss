@@ -1,4 +1,5 @@
 .logo {
+  transition: 1s ease-in-out;
   height: 50px;
   width: 50px;
   margin-bottom: 30px;
@@ -11,14 +12,14 @@
 
 .left-retract {
   flex: 1;
-  .logo {
-    color: white;
-  }
 }
 
 .left-extend {
-  background-color: #ffe135;
+  // background-color: #ffe135;
   flex: 2;
+  .logo {
+    transform: scale(1.3);
+  }
 }
 
 .home-left {
@@ -28,7 +29,7 @@
 
 .home-right {
   background-color: gray;
-  transition-duration: 1s;
+  transition: ease-in-out 1s;
   .canvas {
     transition-duration: 1s;
   }

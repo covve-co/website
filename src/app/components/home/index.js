@@ -1,5 +1,9 @@
 import React from 'react';
+import { Route, Switch } from 'react-router';
+import BrowserRouter from 'react-router-dom';
 import HomeButton from '../home-button/';
+import About from '../about/';
+
 import waves from './waves.svg';
 import logo from './logo.svg';
 import { isAbsolute } from 'path';
@@ -44,7 +48,9 @@ export default class Home extends React.Component {
         </div>
         <div class="home-right" style={{ flex: 5 }}>
           <div class="canvas">
-            <h1> A thing </h1>
+            <Switch>
+              <Route path="/About" component={About} />
+            </Switch>
           </div>
         </div>
       </div>

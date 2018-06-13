@@ -5,9 +5,7 @@ import Home from './components/home/';
 
 ReactDOM.render(
   <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={Home} />
-    </Switch>
+    <Home />
   </BrowserRouter>,
   document.getElementById('app')
 );
