@@ -1,12 +1,9 @@
-@keyframes translate {
+@keyframes wave-translate {
   0% {
-    transform: translateX(0%);
-  }
-  50% {
-    transform: translateX(-25%);
+    transform: translateX(-4%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-45%);
   }
 }
 
@@ -26,6 +23,7 @@
 }
 
 .home-button {
+  user-select: none;
   font-weight: bold;
   font-family: 'Raleway', sans-serif;
   width: 340px;
@@ -37,23 +35,27 @@
     font-size: 80px;
     font-weight: bold;
     text-decoration: none;
+    transform: rotate(0deg);
+    transition: 0.2s;
   }
   .wave {
     flex: 2;
-    width: 150%;
+    width: 200%;
     visibility: hidden;
   }
 }
 
 .home-button:hover {
   a {
-    animation: wavy 3s infinite;
+    animation: wavy 4s infinite;
     animation-timing-function: linear;
     color: $highlight-color;
   }
   .wave {
-    animation: translate 8s infinite;
+    animation: wave-translate 4s infinite;
     animation-timing-function: linear;
+    animation-delay: 0ms;
     visibility: visible;
+    transform: translateX(-4%);
   }
 }
