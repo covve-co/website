@@ -23,8 +23,8 @@ body {
   display: flex;
 }
 
-@import 'styles/normalize';
-@import 'components/home/index';
-@import 'components/home-button/index';
+@import './styles/normalize';
+@import './components/home/index';
+@import './components/home-button/index';
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700');
