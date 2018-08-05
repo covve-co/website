@@ -5,10 +5,7 @@ import HomeButton from '../home-button/';
 import About from '../about/';
 import Contact from '../contact';
 import Work from '../work';
-
-import waves from './waves.svg';
 import logo from './logo.svg';
-import { isAbsolute } from 'path';
 
 export default class Home extends React.Component {
   constructor(props) {
