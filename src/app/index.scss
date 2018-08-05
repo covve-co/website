@@ -1,5 +1,4 @@
 $highlight-color: #17c0f2;
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -10,8 +9,8 @@ $highlight-color: #17c0f2;
 }
 
 body {
-  background-color: whitesmoke;
-  overflow: hidden;
+  overflow-y: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #app {
@@ -26,5 +25,4 @@ body {
 @import './styles/normalize';
 @import './components/home/index';
 @import './components/home-button/index';
-
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700');

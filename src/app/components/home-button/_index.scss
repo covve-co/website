@@ -23,16 +23,18 @@
 }
 
 .home-button {
+  display: flex;
+  flex-direction: column;
   user-select: none;
   font-weight: bold;
   font-family: 'Raleway', sans-serif;
   width: 340px;
   overflow: hidden;
   transition-duration: 1s;
-  a {
+  .nav-link {
     flex: 1;
     color: black;
-    font-size: 80px;
+    font-size: 3em;
     font-weight: bold;
     text-decoration: none;
     transform: rotate(0deg);
@@ -57,5 +59,18 @@
     animation-delay: 0ms;
     visibility: visible;
     transform: translateX(-4%);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .home-button {
+    visibility: hidden;
+    .nav-link {
+      font-size: 1em;
+      animation: none !important;
+    }
+    .wave {
+      visibility: hidden !important;
+    }
   }
 }
